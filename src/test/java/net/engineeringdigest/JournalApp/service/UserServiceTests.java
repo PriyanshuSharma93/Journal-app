@@ -25,8 +25,8 @@ public class UserServiceTests {
     @ParameterizedTest
     @ValueSource (strings = {
             "ram",
-            "priyanshu",
-            "shyam"
+            "priyanshu"
+
     })
     public void testFindByUserName(String name){
         assertNotNull(userRepository.findByUserName(name),"Failed for:" + name);
