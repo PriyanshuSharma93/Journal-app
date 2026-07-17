@@ -1,8 +1,12 @@
     package net.engineeringdigest.JournalApp.service;
 
+    import lombok.extern.slf4j.Slf4j;
+    import lombok.extern.slf4j.XSlf4j;
     import net.engineeringdigest.JournalApp.entity.User;
     import net.engineeringdigest.JournalApp.repository.UserRepository;
     import org.bson.types.ObjectId;
+    import org.slf4j.Logger;
+    import org.slf4j.LoggerFactory;
     import org.springframework.beans.factory.annotation.Autowired;
     import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
     import org.springframework.security.crypto.password.PasswordEncoder;
@@ -13,6 +17,7 @@
     import java.util.Optional;
 
     @Component
+    @Slf4j
     public class UserService {
 
         @Autowired
@@ -21,10 +26,23 @@
 
         private static final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
-        public void saveNewUser(User user) {
-            user.setPassword(passwordEncoder.encode(user.getPassword()));
-            user.setRoles(Arrays.asList("USER"));
-            userRepository.save(user);
+
+//        private static final Logger logger = LoggerFactory.getLogger(UserService.class);
+
+        public boolean saveNewUser(User user) {
+            try {
+                user.setPassword(passwordEncoder.encode(user.getPassword()));
+                user.setRoles(Arrays.asList("USER"));
+                userRepository.save(user);
+                return true;
+            } catch (Exception e) {
+                log.error("hahahhahahahhaha");
+                log.warn("hahahahahahaha");
+                log.info("hahahahahahaha");
+                log.debug("hahahahahahaha");
+                log.trace("hahahahahahaha");
+                return false;
+            }
         }
 
         public void saveAdmin(User user) {
