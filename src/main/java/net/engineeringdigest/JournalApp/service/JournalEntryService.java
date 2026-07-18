@@ -1,5 +1,6 @@
 package net.engineeringdigest.JournalApp.service;
 
+import lombok.extern.slf4j.Slf4j;
 import net.engineeringdigest.JournalApp.entity.JournalEntry;
 import net.engineeringdigest.JournalApp.entity.User;
 import net.engineeringdigest.JournalApp.repository.JournalEntryRepository;
@@ -15,6 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Component
+@Slf4j
 public class JournalEntryService {
 
     @Autowired
@@ -62,7 +64,7 @@ public class JournalEntryService {
             }
 
         } catch (Exception e) {
-            System.out.println(e);
+            log.error("Error",e);
             throw new RuntimeException("An Error Occured while saving the entry.", e);
         }
         return removed;

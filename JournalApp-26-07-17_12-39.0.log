@@ -1,0 +1,3 @@
+12:39:31.313 [http-nio-8080-exec-5] ERROR n.e.JournalApp.service.UserService - hahahhahahahhaha
+12:39:31.361 [http-nio-8080-exec-5] WARN  n.e.JournalApp.service.UserService - hahahahahahaha
+12:39:31.362 [http-nio-8080-exec-5] INFO  n.e.JournalApp.service.UserService - hahahahahahaha
