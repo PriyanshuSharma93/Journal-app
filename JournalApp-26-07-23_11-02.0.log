@@ -1,0 +1,2 @@
+11:02:58.933 [main] INFO  n.e.JournalApp.JournalApplication - Starting JournalApplication using Java 17.0.16 on priyanshu with PID 17188 (C:\Users\lenovo\Downloads\JournalApp\JournalApp\target\classes started by lenovo in C:\Users\lenovo\Downloads\JournalApp\JournalApp)
+11:02:58.947 [main] INFO  n.e.JournalApp.JournalApplication - The following 1 profile is active: "dev"
