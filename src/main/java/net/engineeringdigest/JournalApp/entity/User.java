@@ -18,7 +18,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "users")
+//@Document(collection = "users")
 
 public class User {
     @Id
@@ -26,6 +26,8 @@ public class User {
     @Indexed(unique = true)
     @NonNull
     private String userName;
+    private String email;
+    private boolean sentimentAnalysis;
     @NonNull
     private String password;
     @DBRef
