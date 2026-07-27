@@ -6,6 +6,8 @@ spring:
 
 
 
+
+
 weather:
   api:
     key: 9dfd60f9a354d7e796947c3d611f881b
