@@ -1,5 +1,8 @@
 
 spring:
+  redis:
+    host: localhost
+    port: 6379
   data:
     mongodb:
       uri: mongodb+srv://sharma_priyanshu:Journal12345@cluster0.00beyc0.mongodb.net/journaldb?retryWrites=true&w=majority&appName=Cluster0

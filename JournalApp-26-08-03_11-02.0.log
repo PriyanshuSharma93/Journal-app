@@ -1,14 +1,7 @@
-11:53:33.754 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/_journal] threw exception [Request processing failed; nested exception is org.springframework.web.client.HttpClientErrorException$Unauthorized: 401 Unauthorized: "{"success":false,"error":{"code":101,"type":"invalid_access_key","info":"You have not supplied a valid API Access Key. [Technical Support: support@apilayer.com]"}}"] with root cause
-org.springframework.web.client.HttpClientErrorException$Unauthorized: 401 Unauthorized: "{"success":false,"error":{"code":101,"type":"invalid_access_key","info":"You have not supplied a valid API Access Key. [Technical Support: support@apilayer.com]"}}"
-	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:105)
-	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:168)
-	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:122)
-	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)
-	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:825)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:783)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:608)
-	at net.engineeringdigest.JournalApp.service.WeatherService.getWeather(WeatherService.java:31)
+11:02:10.901 [http-nio-8080-exec-3] ERROR n.e.JournalApp.service.RedisService - Exception
+java.lang.NullPointerException: Cannot invoke "Object.toString()" because "o" is null
+	at net.engineeringdigest.JournalApp.service.RedisService.get(RedisService.java:24)
+	at net.engineeringdigest.JournalApp.service.WeatherService.getWeather(WeatherService.java:33)
 	at net.engineeringdigest.JournalApp.controller.UserController.greetings(UserController.java:54)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
